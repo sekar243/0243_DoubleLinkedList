@@ -37,6 +37,12 @@ void addNode()
             cout << "\033[31mDuplicate roll numbers not allowed\033[0m" << endl;
             return;
         }
+        // if the list is empty, make the new node the START
+        // jika list kosong, maka node next nya adalah START
+        newNode->next = START; // step 3: make the new node point to the frst node
+        // kondisi jika start tidak memiliki nilai atau tidak kosong
+        if (START != NULL)
+       
     }
 
 }
