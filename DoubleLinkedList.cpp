@@ -17,3 +17,12 @@ Node *START = NULL;
 
 // deklarasi prosedur addNode
 void addNode()
+{
+
+    // pembuatan node dan pemberian value untuk data noMhs dan name
+    Node *newNode = new Node(); //step 1 buat Node baru
+    cout << "\nEnter the roll number of the student: ";
+    cin >> newNode->noMhs; // Assign value to the data field of the new Node
+    cout << "\nEnter the name of the student: ";
+    cin >> newNode->name; // Assign values to the data field of th
+}
