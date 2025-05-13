@@ -62,9 +62,30 @@ void addNode()
         while (current != NULL && current->noMhs < newNode->noMhs)
         {                        // step 1.c: traverse the list to find the 
             previous = current; // step 1.d: move the prrevious to the current
-            current = current->next // step 1.e: move the current to the next
+            current = current->next; // step 1.e: move the current to the next
         }
-        
+
+        //set nilai next node baru = current dan prev node baru = previous
+        newNode->next = current; // step4: make the next field of the new node
+        newNode->prev = previous; // step 5: make the previous field of the new node
+
+        // kondisi jika current tidak sama dengan null
+        if (current != NULL)
+        {
+            current->prev = newNode; // step 6: make the previous field of the 
+        }
+
+        // kondisi jika previous tidak sama dengan null
+        if (previous != NULL)
+        {
+            previous->next = newNode; // step 7: make the next field of the previous
+        }
+        // kondisi jika if previous sama dengan null
+        else
+        {
+            // if previous is still NULL, it means newNode is now the first node
+            START = newNode;
+        }
         
     }
 
